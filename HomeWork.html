@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+         p{
+           color: aqua;
+        }
+
+        #product_value{
+            font-size:40px;
+        }
+
+        #result{
+            font-size:40px;
+        }
+        button{
+            font-size:18px;
+            padding:10px;
+            margin:10px;
+            width:200px;
+            cursor:pointer;
+
+           background-color:limegreen;
+           
+        }
+        body{
+            background-color: bisque;
+        }
+        #result{
+            display: none;
+        }
+    </style>
+    
+</head>
+
+<body>
+   <h1> Multiply every element in the arrey with 10: </h1>
+    <p id="product_value"></p>
+     <script>
+    var number =[15,80,65,25,70];
+
+    function myFunction(num) {
+    return num *10;
+    }
+
+    var newarray = number.map(myFunction);
+
+    document.getElementById("product_value").innerHTML =newarray;
+    </script>
+    
+    
+    <button onclick ="ascending()">Ascending order</button> 
+    <button onclick ="descending()">Descending order</button>
+    <p id="result"></p>
+    <script>
+    var points = newarray;
+     document.getElementById("result").innerHTML = points;
+
+     function ascending() {
+
+     document.getElementById("result").style.display = "block";
+       points.sort(function(a, b) {
+return a - b; });
+   
+      document.getElementById("result").innerHTML = points;
+     }
+
+     function descending() {
+
+     document.getElementById("result").style.display = "block";
+       points.sort(function(a, b) {
+return b-a; });
+
+    document.getElementById("result").innerHTML = points;
+     }
+    </script>
+
+    
+</body>
+</html>
